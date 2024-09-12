@@ -19,6 +19,10 @@ func main() {
 
 	// Inicia a goroutine sendNumber para enviar um número através do canal.
 	go sendNumber(numChannel, 42)
+	go sendNumber(numChannel, 531)
+	go sendNumber(numChannel, 12)
+	go sendNumber(numChannel, 554)
+	go sendNumber(numChannel, 75)
 
 	// Recebe o número enviado para o canal e armazena na variável 'num'.
 	num := <-numChannel
